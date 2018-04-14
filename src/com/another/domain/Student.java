@@ -4,11 +4,15 @@ public class Student {
 	private String id;
 	private String name;
 	private String password;
-	private String uri;
+	private String pictureUri;
 	private char sex;
 	private String school;
 	private String profession;
 	private String isOnline;
+
+	public Student() {
+
+	}
 
 	public String getId() {
 		return id;
@@ -34,12 +38,12 @@ public class Student {
 		this.password = password;
 	}
 
-	public String getUri() {
-		return uri;
+	public String getPictureUri() {
+		return pictureUri;
 	}
 
-	public void setUri(String uri) {
-		this.uri = uri;
+	public void setPictureUri(String pictureUri) {
+		this.pictureUri = pictureUri;
 	}
 
 	public char getSex() {
@@ -72,6 +76,12 @@ public class Student {
 
 	public void setIsOnline(String isOnline) {
 		this.isOnline = isOnline;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", password=" + password + ", pictureUri=" + pictureUri
+				+ ", sex=" + sex + ", school=" + school + ", profession=" + profession + ", isOnline=" + isOnline + "]";
 	}
 
 }

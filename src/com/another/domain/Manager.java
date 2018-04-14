@@ -7,6 +7,10 @@ public class Manager {
 	private String tel;
 	private boolean isOnline;
 
+	public Manager() {
+
+	}
+
 	public boolean isOnline() {
 		return isOnline;
 	}
@@ -45,6 +49,12 @@ public class Manager {
 
 	public void setTel(String tel) {
 		this.tel = tel;
+	}
+
+	@Override
+	public String toString() {
+		return "Manager [id=" + id + ", password=" + password + ", name=" + name + ", tel=" + tel + ", isOnline="
+				+ isOnline + "]";
 	}
 
 }

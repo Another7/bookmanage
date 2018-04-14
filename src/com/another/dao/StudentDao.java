@@ -13,11 +13,11 @@ import com.another.domain.Student;
  */
 public interface StudentDao {
     /**
-     * @param studentid 注册学号
+     * @param Student对象 注册学号
      * @return  是否注册成功
      * @throws SQLException
      */
-    public boolean register(String studentid) throws SQLException;
+    public boolean register(Student student) throws SQLException;
     
     /**
      * @param student 传入学生对象

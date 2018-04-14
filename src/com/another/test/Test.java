@@ -1,27 +1,22 @@
 package com.another.test;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import com.another.util.TomcatDBUtil;
 
 public class Test {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		// TODO Auto-generated method stub
-        try {
-			Connection connection = null;
-			connection = TomcatDBUtil.getConnection();
-			if (connection == null){
-				System.out.println("连接失败");
-			} else {
-				System.out.println("连接成功");
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		String sql = "select isBack from borrowinfo ";
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookinfo", "root", "123456");
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+		while (rs.next()) {
+			System.out.println(rs.getBoolean("isBack"));
 		}
-        
 	}
 
 }

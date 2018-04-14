@@ -23,4 +23,8 @@ public class TomcatDBUtil {
 	public static Connection getConnection() throws SQLException {
 		return dataSource.getConnection();
 	}
+	
+	public static DataSource getDataSource() throws SQLException {
+		return dataSource;
+	}
 }

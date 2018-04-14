@@ -6,9 +6,8 @@
 		username="root" 
 		password="123456" 
 		driverClassName="com.mysql.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/bookinfo" 
+		url="jdbc:mysql://localhost:3306/bookinfo?useSSL=true" 
 		initialSize="10" 
-		maxActive="20"
-		maxIdle="4" 
-		></Resource>
+		maxTotal="10"
+		maxIdle="4" />
 </Context>

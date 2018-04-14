@@ -1,12 +1,17 @@
 package com.another.domain;
 
 public class Book {
+
 	private String isbn;
 	private String name;
 	private float price;
 	private String press;
 	private String author;
 	private int number;
+
+	public Book() {
+
+	}
 
 	public String getIsbn() {
 		return isbn;
@@ -54,6 +59,12 @@ public class Book {
 
 	public void setNumber(int number) {
 		this.number = number;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [isbn=" + isbn + ", name=" + name + ", price=" + price + ", press=" + press + ", author=" + author
+				+ ", number=" + number + "]";
 	}
 
 }
